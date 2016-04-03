@@ -1,0 +1,71 @@
+
+a
+{
+	cursor: pointer;
+}
+h4,h3
+{
+	font-weight: bold;
+	color: #333;
+}
+body
+{
+	background-image: url(../img/bg001.jpg);
+	background-size: cover;
+}
+#main
+{
+	margin: 100px auto 0;
+	height: 450px;
+}
+#panel
+{
+	background-color: rgba(255,255,255,0.4);
+}
+#panel .tab-pane
+{
+	margin: 40px 0 40px 10px;
+}
+#panel .tab-pane p
+{
+	color: #555;
+}
+#panel .tab-pane h4
+{
+	margin-top: 20px;
+}
+#copyright
+{
+	text-align: center;
+	color: #ddd;
+	margin-bottom: 40px;
+}
+#others
+{
+	height: 100%;
+	border: 2px dotted #3C98D3;
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px 5px 40px;
+	background-color: rgba(255,255,255,0.4);
+}
+#others p
+{
+	color: #555;
+	font-size: 12px;
+	margin: 40px 10px 0;
+}
+#others button
+{
+	width: 120px;
+	margin: 60px 0 20px;
+}
+#omodal p
+{
+	margin: 10px 0 10px;
+	font-size: 18px;
+}
+#omodal
+{
+	top: 20%;
+}

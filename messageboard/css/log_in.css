@@ -1,0 +1,117 @@
+/*图标集*/
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../../fonts/glyphicons-halflings-regular.eot');
+    src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-ok:before {
+    content: "\e013";
+}
+/*图标集END*/
+
+
+body {
+    background-image: url("../img/login_bg.jpg");
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    color: #333;
+}
+
+hr {
+    margin: 0;
+}
+
+#logh {
+    margin: 0;
+    padding: 20px 0 20px 5px;
+}
+
+li {
+    list-style: none;
+}
+
+#main {
+    width: 850px;
+    height: 450px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+#loginList {
+    width: 330px;
+    height: 180px;
+    margin: 70px auto 0;
+    padding: 0;
+}
+
+.line {
+    height: 70px;
+}
+
+.line label {
+    width: 10%;
+    float: left;
+    padding-right: 40px;
+}
+
+.line input {
+    float: left;
+    width: 326px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.line .res {
+    float: left;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.line #checkRemember {
+    width: 13px;
+    height: 13px;
+    margin: 3px 20px 3px 0;
+}
+
+.line #rememberInfo {
+    width: 40%;
+    font-size: 14px;
+}
+.line #forget
+{
+    float: right;
+    text-decoration: none;
+    color: #666;
+    font-size:14px;
+}
+#submit {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 330px;
+    background-color: rgba(255, 255, 200, 0.7);
+    border: none;
+}
+
+#submit:hover {
+    background-color: rgba(255, 255, 200, 1);
+}
+
+#submit.disabled {
+    background-color: #ccc;
+}
