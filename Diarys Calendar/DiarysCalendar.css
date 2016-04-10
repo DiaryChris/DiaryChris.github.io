@@ -1,0 +1,151 @@
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,select,textarea,form,table,tbody,tr,td
+{
+	margin: 0; 
+	padding: 0;
+	font-size: 100%;
+}
+ul,ol
+{
+	list-style:none;
+}
+@font-face
+{
+	font-family: 'Deng';
+	src:url('fonts/Deng.ttf');
+}
+@font-face
+{
+	font-family: 'DengL';
+	src:url('fonts/Dengl.ttf');
+}
+@font-face
+{
+
+	font-family: 'DengB';
+	src:url('fonts/Dengb.ttf');
+}
+@font-face
+{
+	font-family: 'MyriadC';
+	src:url('fonts/MyriadPro-Cond.otf');
+}
+body
+{
+	font:14px "Deng";
+	color:#666;
+}
+#calendar
+{
+	width: 320px;
+	height: 500px;
+	margin: 100px auto 0;
+}
+#title
+{
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	-webkit-background-size: 15px 15px;
+    -moz-background-size: 15px 15px;
+    background-size: 15px 15px;
+	background-image: linear-gradient(45deg,#fe8 0, #fe8 25%,#fa6 25%,#fa6 50%,#fe8 50%,#fe8 75%,#fa6 75%,#fa6 100%);
+	background-image: -moz-linear-gradient(45deg,#fe8 0, #fe8 25%,#fa6 25%,#fa6 50%,#fe8 50%,#fe8 75%,#fa6 75%,#fa6 100%);
+	background-image: -webkit-linear-gradient(45deg,#fe8 0, #fe8 25%,#fa6 25%,#fa6 50%,#fe8 50%,#fe8 75%,#fa6 75%,#fa6 100%);
+	border-radius: 15px 15px 0 0;
+}
+#title h2
+{
+	line-height: 40px;
+	font-family: "MyriadC";
+	font-size: 30px;
+}
+#title #dateStr
+{
+	line-height: 10px;
+	font-family: "DengB";
+	font-size: 13px;
+}
+#better
+{
+	width: 100%;
+	height: 150px;
+	background-color: #0a9;
+}
+
+#worse
+{
+	width: 100%;
+	height: 90px;
+	background-color: #e78;
+}
+#better .banner,#worse .banner
+{
+	line-height: 40px;
+	text-indent:16px;
+	font-family: "DengB";
+	font-size: 16px;
+}
+#betterThings, #worseThings
+{
+	width: 100%;
+	text-indent: 16px;
+	background-color: rgba(256, 256, 256, 0.4);
+}
+#betterThings
+{
+	height: 90px;
+	padding: 10px 0 10px;
+}
+#worseThings
+{
+	height: 30px;
+	padding: 10px 0 10px;
+}
+#betterThings li, #worseThings li
+{
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+}
+#betterThings li .goodThing, #worseThings li .badThing
+{
+	font-family: "DengB";
+	margin-right: 20px;
+}
+#others
+{
+	width: 100%;
+	height: 140px;
+	background-color: #fe8;
+	opacity: 0.8;
+	border-radius: 0 0 15px 15px;
+	padding: 30px 0 30px;
+}
+#others .item
+{
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-indent: 16px;
+}
+#others .item .itemTitle
+{
+	width: 120px;
+}
+#others .item .itemTitle
+{
+	width: 120px;
+}
+#others .item .itemValue
+{
+	width: 190px;
+	font-family: "DengB";
+}
+#betterThings:hover, #worseThings:hover
+{
+	opacity: 0.8;
+}
+#others:hover
+{
+	opacity: 1;
+}
