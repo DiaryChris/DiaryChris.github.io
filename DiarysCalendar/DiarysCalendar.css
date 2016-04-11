@@ -15,7 +15,8 @@ ul,ol
 }
 body
 {
-	font:14px "SimHei";
+	font-size:14px;
+	font-family:'STHeiti','SimHei','sans-serif';
 	color:#666;
 }
 #calendar
