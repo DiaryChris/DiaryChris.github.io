@@ -173,7 +173,7 @@ function renderHTML() {
 
 
 
-window.onload = function() {
+function handleCalendar() {
 
 	var today = new Date();
 	var year = today.getFullYear();

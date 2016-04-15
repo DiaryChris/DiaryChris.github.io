@@ -1,4 +1,0 @@
-name: diarychris
-version: 3
-handle:
-- expire:  if( path ~ "img" ) time 10
