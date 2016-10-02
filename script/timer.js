@@ -107,7 +107,7 @@ function updateBalls() {
 			balls[count++] = balls[i];
 		}
 	}
-	while (balls.length > Math.min(count, 500)) {
+	while (balls.length > Math.min(count, 1000)) {
 		balls.pop();
 	}
 }
