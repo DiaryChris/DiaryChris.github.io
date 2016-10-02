@@ -118,7 +118,7 @@ var goBang = {
                     comWin[i] -= 5;
                     if (++playerWin[i] === 5) {
                         this.end = true;
-                        this.alertWin('You win!');
+                        this.alertWin(this.mode === 1 ? 'Black win!' : 'You win!');
                     }
                 }
             }
@@ -137,7 +137,7 @@ var goBang = {
                     playerWin[i] -= 5;
                     if (++comWin[i] === 5) {
                         this.end = true;
-                        this.alertWin('Computer win!');
+                        this.alertWin(this.mode === 1 ? 'White win!' : 'Computer win!');
                     }
                 }
             }
@@ -328,7 +328,7 @@ var goBang = {
     },
     //显示选项面板
     showOptionPanel: function() {
-    	var self=this;
+        var self = this;
 
         var canvas = document.getElementById('goBangCanvas');
         var optPanel = document.getElementById('optionPanel');
@@ -344,16 +344,16 @@ var goBang = {
             optPanel.classList.remove('panelMoveOut');
         }
 
-        mode1Btn.addEventListener('click', function () {
-        	self.mode=1;
-        	self.play();
-        	canvas.classList.remove('canvasMoveOut');
+        mode1Btn.addEventListener('click', function() {
+            self.mode = 1;
+            self.play();
+            canvas.classList.remove('canvasMoveOut');
             optPanel.classList.remove('panelMoveOut');
         });
-        mode2Btn.addEventListener('click', function () {
-        	self.mode=2;
-        	self.play();
-        	canvas.classList.remove('canvasMoveOut');
+        mode2Btn.addEventListener('click', function() {
+            self.mode = 2;
+            self.play();
+            canvas.classList.remove('canvasMoveOut');
             optPanel.classList.remove('panelMoveOut');
         });
     }
