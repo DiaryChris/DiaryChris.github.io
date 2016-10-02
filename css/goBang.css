@@ -1,0 +1,106 @@
+/* normalize */
+
+body,
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+select,
+textarea,
+form,
+table,
+tbody,
+tr,
+td {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+@font-face {
+    font-family: 'MyriadC';
+    src: url('../font/MyriadPro-Cond.otf');
+}
+
+body {
+    font-size: 14px;
+    font-family: 'SimHei', 'sans-serif';
+    color: #666;
+    background-color: #ffb;
+}
+
+
+/* layout */
+
+#goBangCanvas {
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin: 150px auto 0;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+#winInfo {
+	display: none;
+    position: fixed;
+    width: 300px;
+    height: 160px;
+    top: 50%;
+    left: 50%;
+    margin-top: -85px;
+    margin-left: -155px;
+    background-color: #fff;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    font-family: 'MyriadC';
+    font-size: 18px;
+}
+
+#winMsg {
+    margin: 25px auto;
+    text-align: center;
+    font-size: 28px;
+}
+
+#restartBtn {
+    width: 110px;
+    height: 36px;
+    background-color: #6ea;
+    border-radius: 10px;
+    margin: 10px 18px 10px;
+    cursor: pointer;
+}
+
+#closeBtn {
+    width: 110px;
+    height: 36px;
+    background-color: #e54;
+    border-radius: 10px;
+	margin: 10px 18px 10px;
+	cursor: pointer;
+}
