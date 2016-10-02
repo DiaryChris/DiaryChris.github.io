@@ -60,13 +60,20 @@ body {
     display: block;
     width: 400px;
     height: 400px;
-    margin: 150px auto 0;
     border-radius: 20px;
     background-color: #fff;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -200px;
+    transition: all 1s ease 0.5s;
 }
 
+
+/* alertWin */
+
 #winInfo {
-	display: none;
+    display: none;
     position: fixed;
     width: 300px;
     height: 160px;
@@ -101,6 +108,54 @@ body {
     height: 36px;
     background-color: #e54;
     border-radius: 10px;
-	margin: 10px 18px 10px;
-	cursor: pointer;
+    margin: 10px 18px 10px;
+    cursor: pointer;
+}
+
+
+/* optionPanel */
+
+#optionPanel {
+    width: 220px;
+    height: 330px;
+    background-color: #e54;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    opacity: 0;
+    z-index: -1;
+    transition: all 1s ease 1s;
+}
+
+#mode1Btn,
+#mode2Btn {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    display: block;
+    margin: 75px auto 75px;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: 'MyriadC';
+    font-size: 20px;
+}
+
+#mode1Btn:hover,
+#mode2Btn:hover {
+    background-color: #ffb;
+}
+
+
+/* animation */
+
+.canvasMoveOut {
+    opacity: 1 !important;
+    box-shadow: 10px 10px;
+    margin-left: -360px !important;
+}
+
+.panelMoveOut {
+    opacity: 1 !important;
+    box-shadow: 10px 10px;
+    margin-left: 150px !important;
 }

@@ -24,7 +24,7 @@ var goBang = {
     //是否游戏结束
     end: false,
     // 游戏模式 1-玩家对弈 2-与AI对弈
-    mode: 2,
+    mode: 1,
     //主入口
     play: function(options) {
         var self = this;
@@ -56,6 +56,8 @@ var goBang = {
         this.initWins();
         //初始化end
         this.end = false;
+        //初始化player为先手
+        this.player = true;
 
         this.renderBoard(ctx);
 
@@ -159,7 +161,7 @@ var goBang = {
             if (this.mode === 2) {
                 setTimeout(function() {
                     self.computerAI(ctx);
-                }, 500 + 1000 * Math.random());
+                }, 500 + 500 * Math.random());
             }
         }
     },
@@ -234,6 +236,7 @@ var goBang = {
             comWin[i] = 0;
         }
     },
+    //计算机AI实现
     computerAI: function(ctx) {
         var wins = this.wins,
             count = this.count,
@@ -304,6 +307,7 @@ var goBang = {
             this.player = !this.player;
         }
     },
+    //胜负提示
     alertWin: function(str) {
         var self = this;
 
@@ -319,11 +323,44 @@ var goBang = {
         })
         cBtn.addEventListener('click', function() {
             panel.style.display = 'none';
+            self.showOptionPanel();
         })
+    },
+    //显示选项面板
+    showOptionPanel: function() {
+    	var self=this;
+
+        var canvas = document.getElementById('goBangCanvas');
+        var optPanel = document.getElementById('optionPanel');
+
+        var mode1Btn = document.getElementById('mode1Btn');
+        var mode2Btn = document.getElementById('mode2Btn');
+
+        canvas.classList.add('canvasMoveOut');
+        optPanel.classList.add('panelMoveOut');
+
+        function MoveIn() {
+            canvas.classList.remove('canvasMoveOut');
+            optPanel.classList.remove('panelMoveOut');
+        }
+
+        mode1Btn.addEventListener('click', function () {
+        	self.mode=1;
+        	self.play();
+        	canvas.classList.remove('canvasMoveOut');
+            optPanel.classList.remove('panelMoveOut');
+        });
+        mode2Btn.addEventListener('click', function () {
+        	self.mode=2;
+        	self.play();
+        	canvas.classList.remove('canvasMoveOut');
+            optPanel.classList.remove('panelMoveOut');
+        });
     }
 };
 
 window.onload = function() {
 
     goBang.play();
+    goBang.showOptionPanel();
 };
