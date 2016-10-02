@@ -16,6 +16,7 @@ var goBang = {
     //赢法统计数组
     playerWin: [],
     comWin: [],
+<<<<<<< HEAD
     //棋盘评分数组
     playerScore: [],
     comScore: [],
@@ -25,6 +26,10 @@ var goBang = {
     end: false,
     // 游戏模式 1-玩家对弈 2-与AI对弈
     mode: 2,
+=======
+    //是否游戏结束
+    end: false,
+>>>>>>> origin/master
     //主入口
     play: function(options) {
         var self = this;
@@ -54,6 +59,7 @@ var goBang = {
         }
         //初始化赢法数组与赢法统计数组
         this.initWins();
+<<<<<<< HEAD
         //初始化end
         this.end = false;
 
@@ -61,6 +67,14 @@ var goBang = {
 
         canvas.addEventListener('click', function(event) {
             self.takeOneStep(ctx, event);
+=======
+
+        this.renderBoard(ctx);
+
+        this.player = true;
+        canvas.addEventListener('click', function(event) {
+            self.takeOneStep(ctx, event, self.player);
+>>>>>>> origin/master
         })
     },
     //绘制棋盘
@@ -89,7 +103,11 @@ var goBang = {
         }
     },
     //绘制一步棋
+<<<<<<< HEAD
     renderOneStep: function(ctx, x, y) {
+=======
+    renderOneStep: function(ctx, x, y, player) {
+>>>>>>> origin/master
 
         var r = this.options.PIECE_RADIUS,
             p = this.options.BOARD_PADDING,
@@ -104,7 +122,11 @@ var goBang = {
         ctx.beginPath();
         ctx.arc(p + x * cellX, p + y * cellY, r, 0, 2 * Math.PI);
         ctx.closePath();
+<<<<<<< HEAD
         if (this.player) {
+=======
+        if (player) {
+>>>>>>> origin/master
             ctx.fillStyle = '#333'
             ctx.fill();
 
@@ -113,10 +135,17 @@ var goBang = {
             //获胜判断
             for (i = 0; i < count; i++) {
                 if (wins[x][y][i]) {
+<<<<<<< HEAD
                     comWin[i] -= 5;
                     if (++playerWin[i] === 5) {
                         this.end = true;
                         this.alertWin('You win!');
+=======
+                    comWin[i] = -5;
+                    if (++playerWin[i] === 5) {
+                        this.end = true;
+                        alert('You win!');
+>>>>>>> origin/master
                     }
                 }
             }
@@ -132,18 +161,29 @@ var goBang = {
             //获胜判断
             for (i = 0; i < count; i++) {
                 if (wins[x][y][i]) {
+<<<<<<< HEAD
                     playerWin[i] -= 5;
                     if (++comWin[i] === 5) {
                         this.end = true;
                         this.alertWin('Computer win!');
+=======
+                    playerWin[i] = -5;
+                    if (++comWin[i] === 5) {
+                        this.end = true;
+                        alert('Computer win!');
+>>>>>>> origin/master
                     }
                 }
             }
         }
     },
     //玩家下一步棋
+<<<<<<< HEAD
     takeOneStep: function(ctx, event) {
         var self = this;
+=======
+    takeOneStep: function(ctx, event, player) {
+>>>>>>> origin/master
 
         var p = this.options.BOARD_PADDING,
             cellX = (this.options.BOARD_WIDTH - 2 * this.options.BOARD_PADDING) / 14,
@@ -153,6 +193,7 @@ var goBang = {
             y = Math.round((event.offsetY - p) / cellY),
             inboard = x >= 0 && x <= 14 && y >= 0 && y <= 14;
 
+<<<<<<< HEAD
         if (inboard && !this.board[x][y] && !this.end && (this.player || this.mode === 1)) {
             this.renderOneStep(ctx, x, y);
             this.player = !this.player;
@@ -161,6 +202,11 @@ var goBang = {
                     self.computerAI(ctx);
                 }, 500 + 1000 * Math.random());
             }
+=======
+        if (inboard && !this.board[x][y] && !this.end) {
+            this.renderOneStep(ctx, x, y, player);
+            this.player = !this.player;
+>>>>>>> origin/master
         }
     },
     //将所有赢法加入赢法数组，并根据赢法总计数初始化赢法统计数组
@@ -170,8 +216,11 @@ var goBang = {
             count = this.count,
             playerWin = this.playerWin,
             comWin = this.comWin,
+<<<<<<< HEAD
             playerScore = this.playerScore,
             comScore = this.comScore,
+=======
+>>>>>>> origin/master
             i, j, k;
 
         //初始化赋值，防止报错
@@ -233,6 +282,7 @@ var goBang = {
             playerWin[i] = 0;
             comWin[i] = 0;
         }
+<<<<<<< HEAD
     },
     computerAI: function(ctx) {
         var wins = this.wins,
@@ -321,6 +371,10 @@ var goBang = {
             panel.style.display = 'none';
         })
     }
+=======
+    }
+
+>>>>>>> origin/master
 };
 
 window.onload = function() {
