@@ -360,7 +360,7 @@ var goBang = {
     hmtTrack: function() {
         var i;
         var buttons = document.getElementsByTagName('button');
-        for (i in buttons) {
+        for (i = 0; i < buttons.length; i++) {
             buttons[i].addEventListener('click', function() {
                 var track = this.getAttribute('data-track');
                 _hmt.push(['_trackEvent', 'goBang', 'click', track]);
