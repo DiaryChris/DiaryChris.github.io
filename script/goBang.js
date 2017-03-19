@@ -356,6 +356,16 @@ var goBang = {
             canvas.classList.remove('canvasMoveOut');
             optPanel.classList.remove('panelMoveOut');
         });
+    },
+    hmtTrack: function() {
+        var i;
+        var buttons = document.getElementsByTagName('button');
+        for (i in buttons) {
+            buttons[i].addEventListener('click', function() {
+                var track = this.getAttribute('data-track');
+                _hmt.push(['_trackEvent', 'goBang', 'click', track]);
+            })
+        }
     }
 };
 
@@ -363,4 +373,5 @@ window.onload = function() {
 
     goBang.play();
     goBang.showOptionPanel();
+    goBang.hmtTrack();
 };
