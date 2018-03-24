@@ -12,6 +12,13 @@ a
 {
 	text-decoration: none;
 }
+button {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 @font-face
 {
 	font-family: 'MyriadC';
@@ -74,6 +81,15 @@ body
 	height: 500px;
 	margin: 200px auto 0;
 }
+
+#calendar.moveDown
+{
+	width: 320px;
+	height: 500px;
+	margin: 200px 0 150px 500px;
+	float: left;
+}
+
 #title
 {
 	width: 100%;
@@ -185,3 +201,39 @@ body
 }
 
 
+/*linkArea*/
+
+#linkArea
+{
+	height: 500px;
+	width: 320px;
+	margin: 200px 0 150px 250px;
+	background-color: #444;
+	float: left;
+	border-radius: 15px
+}
+#linkArea:hover
+{
+	background-color: #666;
+}
+
+.turnBtn
+{
+	width: 180px;
+	height: 90px;
+	margin: 100px 70px 100px;
+	background-color: #fff;
+    display: block;
+    cursor: pointer;
+    font-family: 'MyriadC';
+    font-size: 30px;
+    font-weight: bold;
+    color: #666;
+	letter-spacing: 1px;
+}
+
+.turnBtn:hover
+{
+	background-color: #999;
+	color: #fff;
+}
