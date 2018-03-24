@@ -81,7 +81,7 @@ body
 	top: 700px;
 	left: 42%;
 	position: absolute;
-	transition: all 1s ease 1s;
+	transition: all 1.5s ease 1s;
 }
 
 #calendar.moveDown
@@ -215,7 +215,7 @@ body
 	border-radius: 15px;
 	opacity: 0;
     z-index: -1;
-    transition: opacity 1.5s ease 1.5s;
+    transition: opacity 2s ease 1.5s;
 }
 
 #linkArea.moveDown
