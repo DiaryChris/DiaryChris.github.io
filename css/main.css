@@ -71,23 +71,23 @@ body
 
 
 
-
-
 /*DiarysCalendar.css*/
 
 #calendar
 {
 	width: 320px;
 	height: 500px;
-	margin: 200px auto 0;
+	margin: 0 0 150px;
+	top: 700px;
+	left: 42%;
+	position: absolute;
+	transition: all 1s ease 1s;
 }
 
 #calendar.moveDown
 {
-	width: 320px;
-	height: 500px;
-	margin: 200px 0 150px 500px;
-	float: left;
+	margin: 0 0 150px -300px;
+	/*float: left;*/
 }
 
 #title
@@ -207,12 +207,22 @@ body
 {
 	height: 500px;
 	width: 320px;
-	margin: 200px 0 150px 250px;
+	top: 700px;
+	left: 57%;
+	margin: 0 0 150px;
+	position: absolute;
 	background-color: #444;
-	float: left;
-	border-radius: 15px
+	border-radius: 15px;
+	opacity: 0;
+    z-index: -1;
+    transition: opacity 1.5s ease 1.5s;
 }
-#linkArea:hover
+
+#linkArea.moveDown
+{
+	opacity: 1 !important;
+}
+#linkArea.moveDown:hover
 {
 	background-color: #666;
 }
