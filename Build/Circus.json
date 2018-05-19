@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "CircusDemo",
+"dataUrl": "Circus.data.unityweb",
+"asmCodeUrl": "Circus.asm.code.unityweb",
+"asmMemoryUrl": "Circus.asm.memory.unityweb",
+"asmFrameworkUrl": "Circus.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
