@@ -126,7 +126,10 @@ function getSleepTime(index) {
     var hour = (22 + addHour) % 24;
     var min = addMin;
 
-    var str = hour + ':' + min;
+    var strHour = hour < 10 ? "0" + hour : "" + hour;
+    var strMin = min < 10 ? "0" + min : "" + min;
+
+    var str = strHour + ':' + strMin;
     return str;
 }
 
